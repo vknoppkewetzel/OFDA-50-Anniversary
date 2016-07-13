@@ -33,7 +33,7 @@ var featuredJSON = {
 		"tagline":"After obtaining its independence from Portugal in November 1975, Angola plunged into 27 years of civil war that killed more than 500,000 people and displaced millions more.",
   		"ovTagline":"27 yrs of civil war beginning November 1975",
 		"ovElements":[["killed","500,000",""],["displaced","1","MILLION+"]]
-	},
+	   },
 	"BGD":{
 		"cat":"country",
 		"year":1970,
@@ -246,7 +246,6 @@ var featuredJSON = {
 		"tagline":"",
 		"ovTagline":"",
 		"ovElements":[["","",""],["","",""],["","",""]]
-
 		},
 	"CRI":{
 		"cat":"country",
@@ -260,7 +259,6 @@ var featuredJSON = {
 		"tagline":"The devastating destruction caused by the 1963 Irazu volcano eruption was witnessed by President John F. Kennedy and paved the way for OFDA's creation by underscoring the need for a lead U.S. agency to oversee foreign disaster response. Now, Costa Rica is home to one of OFDA's regional offices and is a hub for disaster risk reduction work in the region.",
 		"ovTagline":"",
 		"ovElements":[["","",""],["","",""],["","",""]]
-
 		},
 	"SLV":{
 		"cat":"country",
@@ -284,7 +282,6 @@ var featuredJSON = {
 		"tagline":"In 2001, 2 earthquakes exactly 1 month apart rattled El Salvador and left a wake of destruction. Nearly 1.6 million people were affected and more than 300,000 homes were reduced to rubble. OFDA responded by helping to build more than 22,000 shelters.",
 		"ovTagline":"Earthquakes hit on January 13 & February 13, 2001",
 		"ovElements":[["killed","1,159",""],["affected","1.59","MILLION"],["shelters","22,005",""]]
-		
 		},
 	"FLA":{
 		"id":"FLA",
@@ -301,7 +298,6 @@ var featuredJSON = {
 		"tagline":"The Sunshine State is the location of one of OFDA's strategically located warehouses stockpiled with emergency relief supplies. It's also where OFDA works with Florida International University to test the strength & design of emergency shelters in the Wall of Wind.",
 		"ovTagline":"",
 		"ovElements":[["","",""],["","",""],["","",""]]
-
 		},	
 	"GTM":{
 		"cat":"country",
@@ -320,7 +316,6 @@ var featuredJSON = {
 		"tagline":"On February 4, 1976, a magnitude 7.6 earthquake shook Guatemala City and surrounding areas. Affecting nearly 5 million people, it proved to be one of the worst natural disasters in Central America's modern history.",
 		"ovTagline":"Earthquake on February 4, 1976",
 		"ovElements":[["affected","4.9","MILLION+"],["killed","23,000",""],["homeless","1.1","MILLION+"]]
-
 		},
 	"GIN":{
 		"cat":"regional",
@@ -354,7 +349,7 @@ var featuredJSON = {
 		"tagline":"On January 12, 2010, a magnitude 7.0 earthquake shook Haiti, killing 316,000 people and displacing 1.5 million others. In October 2010, cholera broke out, resulting in nearly 704,000 reported cases and in the death of more than 8,500 people.",
 		"ovTagline":"Earthquake on January 12, 2010",
 		"ovElements":[["killed","316,000",""],["displaced","1.5","MILLION"],["affected","3","MILLION"]]
-	},	
+	   },	
 	"HND":{
 		"cat":"country",
 		"year":1998,
@@ -367,8 +362,7 @@ var featuredJSON = {
 		"tagline":"Hurricane Mitch was the most powerful and destructive hurricane of the 1998 Atlantic Hurricane Season, killing nearly 10,000 people and destroying nearly 100,000 homes.",
 		"ovTagline":"Hurricane Mitch struck October to November 1998",
 		"ovElements":[["affected","3.6", "MILLION"],["killed","10,000",""],["housedestroy","100,000", ""]]
-
-	},
+	   },
 	"IDN":{
 		"cat":"both",
 		"catName":"Indian Ocean Tsunami",
@@ -383,23 +377,22 @@ var featuredJSON = {
 		"tagline":"With more than 3 million people living within 6 miles of an active volcano, Indonesia has the most people at risk from volcanoes in the world. On October 26, 2010, Mt. Merapi had its <span style=color:#FFCB36;font-weight:bold>largest eruption</span> in 100+ years.",
 		"ovTagline":"Mt. Merapi began erupting October 26, 2010",
 		"ovElements":[["evacuated","400,000",""],["saved","15,000",""],["killed","386",""]]
-
 		},	
 	"IND":{
 		"cat":"both",
 		"catID":"io_tsunami",	
 		"year":1999,
-		"options":["Story"],		
+		"options":["Story", "Fact Sheet"],		
 		"Story":[{"Button":"Preparing for Cyclones","Name":"ind.html"}, {"Button":"A Tale of Two Cyclones","Name":"ind2.html"}],
 		"Video":[],
+        "Fact Sheet":[{"Button":"No Name","URL":"www.usaid.gov/sites/default/files/documents/1866/OFDA_Fact_Sheet.pdf"}],
 		"Infographic":[],
 		"type":"storm",
 		"fullname":"India",
 		"tagline":"In October 1999, <span style=color:#FFCB36;font-weight:bold>twin cyclones</span> hit the eastern coast of India within 2 weeks, killing nearly 10,000 people and affecting almost 14 million others. Since then, OFDA has worked with India on programs that have reduced the risk cyclones pose to lives and livelihoods.",
 		"ovTagline":"Cyclones hit eastern coast October 1999",
 		"ovElements":[["2weeks","2", "CYCLONES"],["killed","10,000",""],["affected","14", "MILLION"]]
-	},
-
+	   },
 	"IRQ":{
 		"cat":"country",
 		"year":2001,
@@ -498,7 +491,6 @@ var featuredJSON = {
 		"tagline":"In February 2011, an uprising in Libya led to escalating conflict  that uprooted entire communities, cut off supply routes, and left the Libyan people facing shorages of food, water, and fuel. OFDA's response focused on delivering critical medical assistance.",
 		"ovTagline":"Conflict broke out February 2011",
 		"ovElements":[["healthcare","10,000+",""],["surgeries","3,860",""],["facilities","78",""]]
-		
 		},
 	"LKA":{
 		"cat":"regional",
@@ -515,6 +507,19 @@ var featuredJSON = {
 		"ovTagline":"",
 		"ovElements":[["","",""],["","",""],["","",""]]
 
+		},
+    "MHL":{
+		"cat":"country",
+		"year":1998,
+		"options":["Story"],
+		"Story":[{"Button":"Out from the Cold: Repairing Homes Destroyed During War","Name":"kos.html"}],
+		"Video":[],
+		"Infographic":[],
+		"type":"complex",
+		"fullname":"Kosovo",
+		"tagline":"Conflict in Kosovo between February 1998 and June 1999 displaced hundreds of thousands of ethnic Albanians, resulting in the need for emergency assistance. The humanitarian crisis continued when people returned to their villages, only to find 1/3 of homes were damaged or destroyed.",
+		"ovTagline":"Conflict broke out in February 1998",
+		"ovElements":[["killed","10,000+",""],["displacedKosovo","500,000",""],["homes","365,000",""]]
 		},
 	"MRT":{
 		"cat":"regional",
@@ -545,7 +550,6 @@ var featuredJSON = {
 		"tagline":"",
 		"ovTagline":"",
 		"ovElements":[["","",""],["","",""],["","",""]]
-
 		},
 	"MLI":{
 		"cat":"regional",
@@ -566,7 +570,7 @@ var featuredJSON = {
 		"cat":"country",
 		"year":1985,
 		"options":["Story"],
-		"Story":[{"Button":"OFDA's Leading Role in International Urban Search–and–Rescue","Name":"mex.html"}],
+		"Story":[{"Button":"OFDA's Leading Role in International Urban Searchâ€“andâ€“Rescue","Name":"mex.html"}],
 		"Video":[],
 		"Infographic":[],
 		"type":"quake",
@@ -597,9 +601,7 @@ var featuredJSON = {
 		"tagline":"The magnitude 6.0 earthquake in July 1963 that killed over 1,000 people and destroyed 75% of the city of Skopje revealed coordination challenges in providing disaster assistance that eventually lead to the establishment of OFDA.",
 		"ovTagline":"Earthquake on July 26, 1963",
 		"ovElements":[["killed","1,100",""],["affected","3,383",""],["percentbuildings","75%","OF BUILDINGS"]]
-
 		},
-	
 	"NPL":{
 		"cat":"country",
 		"year":1900,
@@ -613,7 +615,6 @@ var featuredJSON = {
 		"ovTagline":"Natural Disasters (1900 - present)",
 		"ovElements":[["killed","23,153", ""],["affected","9.9","MILLION"],["damage","$1.3", "BILLION"]]
 		},
-
 	"NZL":{
 		"cat":"country",
 		"year":2011,
@@ -631,7 +632,6 @@ var featuredJSON = {
 		"tagline":"On February 22, 2011, a magnitude 6.1 earthquake rocked Christchurch, the country's 2nd largest city. OFDA sent urban search and rescue teams to locate survivors and help coordinate search efforts.",
 		"ovTagline":"Earthquake on February 22, 2011",
 		"ovElements":[["killed","181",""],["affected","301,500",""],["damage","$15","BILLION"]]
-
 		},
 	"NER":{
 		"cat":"regional",
@@ -681,8 +681,7 @@ var featuredJSON = {
 		"tagline":"On October 8, 2005, a magnitude 7.6 earthquake struck 60 miles from Islamabad, causing landslides, demolishing infrastructure, and leveling entire cities. In 2010, historic flooding forced more than 10% of the population to flee their homes when water covered a fifth of the country - an area larger than the states of New York and New Jersey combined.",
 		"ovTagline":"Earthquake struck on October 8, 2005",
 		"ovElements":[["killed","73,338",""],["affected","5.1","MILLION"],["economicdamages","$5.2","BILLION"]]
-		},
-		
+		},	
 	"PHL":{
 		"cat":"country",
 		"year":2013,
@@ -726,7 +725,6 @@ var featuredJSON = {
 		"ovElements":[["","",""],["","",""],["","",""]]
 
 		},
-
 	"SDS":{
 		"cat":"country",
 		"year":2013,
@@ -769,7 +767,6 @@ var featuredJSON = {
 		"tagline":"",
 		"ovTagline":"",
 		"ovElements":[["","",""],["","",""],["","",""]]
-
 		},
 	"SDN":{
 		"cat":"country",
@@ -784,7 +781,6 @@ var featuredJSON = {
 		"tagline":"In February 2003, rebels in the Darfur region took up arms against the Sudanese government over its treatment of the non-Arab population. The government's retaliation and ensuing conflict has affected more than 4.7 million people, to date.", 
 		"ovTagline":"Conflict broke out in February 2013",
 		"ovElements":[["affected","4.7", "MILLION"],["displaced","3", "MILLION"],["camps","1.2", "MILLION"]]  
-	
 		},
 	"SYR":{
 		"cat":"country",
@@ -814,8 +810,7 @@ var featuredJSON = {
 		"tagline":"When the <span style=color:#FFCB36;font-weight:bold>worst flooding</span> in half a century swept through Thailand in 2011 affecting 13.6 million people, OFDA provided assistance and also helped build the resilience of affected communities.",
 		"ovTagline":"Flooding in 2011",
 		"ovElements":[["affected","13.6","MILLION"],["killed","823",""],["economicdamages","$46","BILLION"]]
-
-	},
+	   },
 	"ZMB":{
 		"cat":"country",
 		"year":2011,
@@ -828,7 +823,7 @@ var featuredJSON = {
 		"tagline":"Alternating droughts and floods devastate farmers in Zambia, who rely on crops and livestock to feed their families and make a living. With our partners, OFDA's working to build Zambians' resilience to these shocks.",
 		"ovTagline":"Flooding in 2011",
 		"ovElements":[["affected","13.6","MILLION"],["killed","823",""],["economicdamages","$46","BILLION"]]
-	},
+	   },
 	"ebola":{
 		"id":"ebola",
 		"xyz":[350,350,10],
@@ -843,7 +838,7 @@ var featuredJSON = {
 		"tagline":"On August 5, USAID deployed a Disaster Assistance Response Team to Liberia to lead the overall U.S. response to the worst Ebola outbreak in history. The outbreak is the first to hit West Africa and has been declared an international health emergency.",
 		"ovElements":[["aid","$845","MILLION+"],["responders","3,000",""],["rate","55-60%",""]],
 		"countries":"#SLE, #LBR, #GIN"
-	},
+	   },
 	"io_tsunami":{
 		"id":"io_tsunami",
 		"xyz":[660,350,3],
@@ -860,7 +855,7 @@ var featuredJSON = {
 		"ovTagline":"Storm struck on December 26, 2004",
 		"ovElements":[["killed","220,000",""],["displaced","1.1","MILLION"],["countriesaffected","12",""]],
 		"countries":"#IDN, #IND, #SOM, #MYS, #LKA, #THA"
-	},
+	   },
 	"sahel":{
 		"id":"sahel",
 		"xyz":[380,350,5],
@@ -877,7 +872,7 @@ var featuredJSON = {
 		"ovTagline":"Chronic food insecurity (2012 - present)",
 		"ovElements":[["affected","20","MILLION"],["mal","1","MILLION+ children"]],
 		"countries":"#MRT,#SEN, #MLI, #BFA, #NGA, #NER, #TCD"
-	},
+	   },
 	"horn":{
 		"id":"horn",
 		"xyz":[520,390,7],
@@ -894,7 +889,7 @@ var featuredJSON = {
 		"ovTagline":"Drought led to famine declaration in 2011",
 		"ovElements":[["affected","13","MILLION"],["countriesimpacted","4",""],["worst","60",""]],
 		"countries":"#DJI,  #ETH,  #SOM, #KEN"
-	}
+	   }
 };
 
 var  points = [
@@ -908,6 +903,7 @@ var  points = [
 	["Dakar",[-17.44666,14.692778]],
 	["Nairobi",[36.81666,-1.28333]],
 	["Pretoria",[28.188056,-25.746111]],
+    ["MarshallIslands",[171.368295, 7.148687]],
 	["Bangkok",[100.46666,13.75]]
 ];
 	
@@ -967,6 +963,12 @@ var points2 = {
 		"coord":[28.188056,-25.746111],
 		"tagline":"Pretoria, South Africa is the location of 1 of OFDA's 6 regional offices where staff oversee humanitarian programs in South Africa." 
 	},	
+    "MarshallIslands":{
+		"fullname":"Marshall Islands",
+		"type":"island",
+		"coord":[171.368295, 7.148687],
+		"tagline":"Bangkok, Thailand is the location of 1 of OFDA's 6 regional offices where staff oversee humanitarian programs in East Asia and the Pacific region, as well as South Asia." 
+	},
 	"Bangkok":{
 		"fullname":"Bangkok, Thailand",
 		"type":"office",
@@ -975,8 +977,6 @@ var points2 = {
 	}
 };
 
-
- 
 //var featured = ["PHL","JAM","SDS","HTI"];
 //var featuredMap = d3.set(featured);
 var featuredMap = d3.map(featuredJSON);
@@ -1035,7 +1035,6 @@ svg.append("rect")
 	.attr("width", width)
 	.attr("height", height)
 	.on("click", country_clicked);
-	
 
 var g = svg.append("g");
 
@@ -1063,7 +1062,6 @@ dialogOptionBoolean = 0;
 		.duration(750)
 		.attr("transform", "translate(" + projection.translate() + ")scale(" + xyz[2] + ")translate(-" + xyz[0] + ",-" + xyz[1] + ")")
 		.select(".boundary").style("stroke-width", 1.0 / xyz[2] + "px");
-
 }
 
 d3.select("#map").append("div")
@@ -1179,7 +1177,6 @@ function popup (centroid, selection, type) {
 		selectionName = selection;
 		headline = points2[selection].fullname;
 		tagline = points2[selection].tagline;	
-		
 	} 
 	
 	var arrow = {};
@@ -1247,7 +1244,6 @@ if (centroid[0] >= 0.8 * width || selection.id === "IDN"|| selection.id === "SOM
 				d3.selectAll(color).transition().duration(500).style("fill","#E89624");
 			})	
 			.on("mouseout", function() {
-					
 				dialogOptionBoolean -= 1;
 				d3.selectAll(color).transition().duration(500).style("fill","#FFCB36");
 				setTimeout(function(){
@@ -1291,10 +1287,12 @@ if (type === "both") {
 		.on("mouseover", function() {
 			dialogOptionBoolean += 1;
 			d3.selectAll(featuredJSON[featuredJSON[selection.id].catID[1]].countries).transition().duration(500).style("fill","#E89624");
+        
 		}) 
 		.on("mouseout", function() {
 			dialogOptionBoolean -= 1;
 			d3.selectAll(featuredJSON[featuredJSON[selection.id].catID[1]].countries).transition().duration(70).style("fill","#FFCB36");
+            
 			setTimeout(function(){testDialog(dialogOptionBoolean,null);},10);
 		})
 		.on("click", function() {
@@ -1328,10 +1326,7 @@ if (type === "both") {
 			.on("click.chill", function() { 
 				d3.event.stopPropagation();
 			});
-
-
 	}
-
 }
 
 d3.json("countries_min.topo.json", function(error, us) {	
@@ -1397,8 +1392,6 @@ d3.json("countries_min.topo.json", function(error, us) {
 				} else {
 					 return	null;
 				}
-				
-
 			})
 			.on("mouseout", function(d) {	
 				var	c = "";	
@@ -1414,12 +1407,6 @@ d3.json("countries_min.topo.json", function(error, us) {
 				}
 				return c;
 			});
-		
-				
-		
-
-
-
 
 	d3.json("data/json/FLA.json", function (error, fla) { 
 	g.append("g")
@@ -1450,8 +1437,6 @@ d3.json("countries_min.topo.json", function(error, us) {
 		.on("mouseout", function() {
 			d3.select("#FLA").transition().duration(500).style("fill","#FFCB36");
 		});
-			
-
 
 	d3.json("data/json/DC.geojson", function (error, dc)  {
 	g.append("g")
@@ -1464,13 +1449,8 @@ d3.json("countries_min.topo.json", function(error, us) {
 		.attr("id","DC_path");
 			
 		});
-
-
 	});			
 		
-  
-
-	
 	g.insert("g")
 	  	.datum(topojson.mesh(us, us.objects.countries_min, function (a, b)  {
 			return a !== b ; 
@@ -1526,8 +1506,6 @@ d3.json("countries_min.topo.json", function(error, us) {
 					var type = featuredJSON[selection.id].cat;
 					popup (centroid, selection, type);	
 						return c;
-					
-
 				})
 				.on("click", function(d) {
 					var c = "";
@@ -1565,13 +1543,17 @@ setTimeout(function() {
 						return points2[d[0]].type;
 					});
 
-
 	d3.selectAll(".warehouse")
 		.append("circle")
 		.attr("r",4)					
 		.style("fill","#002A6C")
 		.style("stroke-width","2px");
-	
+    
+    d3.selectAll(".island")
+		.append("circle")
+		.attr("r",4)					
+		.style("fill","#FFCB36")
+		.style("stroke-width","2px");
 	
 	d3.selectAll(".office")
 		.append("path")
@@ -1596,7 +1578,6 @@ setTimeout(function() {
 
 });
 
-
 function isGlobal (xyz, FC) {
 
 	if (xyz[2] === 1) {
@@ -1606,7 +1587,7 @@ function isGlobal (xyz, FC) {
 		d3.selectAll(".circle").style("pointer-events","auto"); 
 		d3.select("#FLA").style("pointer-events","auto").transition().duration(500).style("fill","#FFCB36");
 		d3.selectAll("#ovContainer, #dataTitle").remove();
-		d3.selectAll(".warehouse, .office, .headquarters")
+		d3.selectAll(".warehouse, .office, .island, .headquarters")
 			.style("pointer-events","auto")
 			.transition().duration(500)
 			.style("opacity","1");
@@ -1621,14 +1602,13 @@ function isGlobal (xyz, FC) {
 			.transition().duration(500)
 			.style("opacity",1).style("fill","#FFCB36");
 
- 
 } else if (xyz[2] > 1) {
 	
 	tooltip.style("pointer-events","none");
 
 	d3.selectAll(".circle").style("pointer-events","none"); 
 	d3.select("#FLA").style("pointer-events","none").transition().duration(500).style("fill","#CFCDC9");
-	d3.selectAll(".warehouse, .office, .headquarters")
+	d3.selectAll(".warehouse, .office, .island, .headquarters")
 		.style("pointer-events","none")
 		.transition().duration(500)
 		.style("opacity",0);
@@ -1643,13 +1623,10 @@ function isGlobal (xyz, FC) {
 			
 	d3.selectAll(FC).style("fill","#FFCB36");	
 	
-	
-
 } else {
 	return;
 	}	
 }	
-
 
 //get content from server
 function getHTTP(Media, Country, Name) {
@@ -1671,8 +1648,11 @@ function getHTTP(Media, Country, Name) {
 				console.log(ThingByName);
 				console.log(ThingByName[Name]);
 				} else if (Media === "Story") {
-					
 					text = "<iframe name='iframe1' id='iframe1' src=\"data/countries/" + Country.toLowerCase() + "/" + ThingByName[Name].Name + "\" seamless></iframe>";
+                } else if (Media === "Fact Sheet") {
+					text =  "<iframe width=\"" + width + "\" height=\"" + height + "\" src=\"//" + ThingByName[Name].URL + "\" frameborder=\"0\" allowfullscreen></iframe>";
+				console.log(ThingByName);
+				console.log(ThingByName[Name]);
 				} else if (Media === "Infographic") {
 					text = "<img width=\"" + width + "\" height=\"" + (height - 50) + "\"src=\"data/countries/" + Country.toLowerCase() + "/graphic.jpg\"><div style=\"width:100%;position:absolute;background-color:#2b2b2b;opacity:0.5;bottom:0px;\"><span class=\"font\" style=\"color:white;margin-left:5px;\" >PDF version<a style=\"color:#16B0C1;margin:5px;\" target=\"_blank\" href=" + featuredJSON[Country].Infographic[0].Hyperlink + ">here</a></span></div>";
 				} else if (Media === "Gallery") {
@@ -1688,9 +1668,9 @@ function getHTTP(Media, Country, Name) {
 		.style("top", function () {
 			if (Media ===  "Video") { return "35px"; } 
 			else if (Media === "Story") { return "35px"; }
+            else if (Media === "Fact Sheet") { return "35px"; }
 			else if (Media === "Infographic") { return "35px"; }
-			else if (Media === "Gallery") { return "0px"; }
-				 
+			else if (Media === "Gallery") { return "0px"; }	 
 		});
 }
 
@@ -1719,7 +1699,7 @@ function contentDialog(Country) {
 				.style("pointer-events","none") 
 				.text(function (d) { 
 					return d; 
-				})
+                 })
 				.style("margin-left","8px");
 	
 	d3.select('body').selectAll('.dialogBox')
@@ -1771,7 +1751,6 @@ function contentDialog(Country) {
 
 					var Name = d.Button;
 					getHTTP(Media, Country, Name);
-				
 				})
 				.on("click.stop", function() {d3.event.stopPropagation(); })
 				.on("mouseover", function () {
@@ -1785,8 +1764,6 @@ function contentDialog(Country) {
 					setTimeout(function() {testDialog(dialogOptionBoolean, Media);}, 0);
 					})
 				.on("mouseout.stop", function() {d3.event.stopPropagation(); });
-
-
 			}
 	})
 	.on("mouseout", function () {
@@ -1804,8 +1781,7 @@ function contentDialog(Country) {
 			})
 		.style("height","17px")
 		.style("width","17px")
-		.attr("z-index",4);
-	
+		.attr("z-index",4);	
 }
 
 function ov(feature) {
@@ -1846,7 +1822,7 @@ function ov(feature) {
 							}
 								return border;
 						})
-						.html(function (d) {	
+				     .html(function (d) {	
 								var text;
 								if (d[0] === "displaced") {
 									text = "people displaced";
@@ -1940,7 +1916,6 @@ function ov(feature) {
 							});
 }
 
-
 function get_xyz(d) {
 	var bounds = path.bounds(d);
 	var w_scale = (bounds[1][0] - bounds[0][0]) / width;
@@ -1959,8 +1934,6 @@ function zoom2ADM (d, xyz) {
 				isGlobal(xyz,FC);
 }
 
-
-
 function country_clicked(d) {
 	d3.selectAll(".popDetail, #tooltipImg, .popName").remove();
 	d3.select(".tooltip").style("opacity",0).style("width","0px");	
@@ -1968,7 +1941,6 @@ function country_clicked(d) {
 
 	if (country) {
 		g.selectAll( "#" + country.id ).style('display', null);
-
 	}	
 
 	if (d && country !== d) {
@@ -1990,7 +1962,7 @@ function country_clicked(d) {
 			d3.select("#dataTitle").append("div")
 				.attr("id","dataTitleHTML")
 
-		var hurrAnimation = function(track_location) {
+		/* var hurrAnimation = function(track_location) {
 		d3.json("data/countries/" + d.id.toLowerCase() + "/" + track_location, function(error, track) {
 
 		//	var color_scale = d3.scale.quantile().domain([1,5]).range(colorbrewer.YlGnBu[5]);
@@ -2055,10 +2027,8 @@ function country_clicked(d) {
       					dateTextChange
         					.html("<p><b>" + track[i].month +" " + track[i].day +", " + year + "<br>Category: <span id=\"category\" style=\"color:" + color_scale(track[i].class) + "\">" + track[i].class + "</span></p>");
 								
-
-//						cat.text(track[i].class).style("color", color_scale(track[i].class));
+                        //cat.text(track[i].class).style("color", color_scale(track[i].class));
 							
-
       					//Draw the path, only when i > 0 in otder to have two points
       					if (i>0){
         					var color0 = color_scale(track[i-1].class);
@@ -2149,7 +2119,7 @@ function country_clicked(d) {
       					u01d = Math.sqrt(u01x * u01x + u01y * u01y);
   					return [u01x / u01d, u01y / u01d];
 				};
-			}//end of the hurrAnimation
+			}//end of the hurrAnimation */
 			
 		if (d.id === "IND") {
 			hurrAnimation("track.json");
@@ -2157,8 +2127,6 @@ function country_clicked(d) {
 	
 		} else {
 			hurrAnimation("track.json");
-		
-	
 		}
    		}
 
@@ -2174,7 +2142,7 @@ function country_clicked(d) {
 			zoom2ADM(d,xyz); 			
 			ov(d.id);
 
-		setTimeout(function() {			
+		/* setTimeout(function() {			
 			g.append("circle")
     			.attr("class", "dot")
 				.style("opacity",0)
@@ -2215,7 +2183,7 @@ function country_clicked(d) {
 					
 				});
 
-			},200);
+			},200); */
 	
 		
 
@@ -2251,11 +2219,7 @@ function country_clicked(d) {
 					.attr("r", featuredJSON[d.id].disasterarray2.magnitude * 18 / xyz[2])
       				.remove();
 			}, 800);
-					
-
 			},200);
-
-
 		 },700 );
 	}
 		}
@@ -2293,9 +2257,6 @@ function country_clicked(d) {
     	zoom(xyz);
 		isGlobal(xyz, null); 
 		d3.selectAll(".dialogBox").remove();
-		
   	}
-
 }
-
 
