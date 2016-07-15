@@ -81,7 +81,7 @@ var featuredJSON = {
 		"cat":"country",
 		"year":2008,
 		"options":["Story"],
-		"Story":[{"Button":"From Relief to Recovery in the Ayeyarwady Delta","Name":"mmr.html"}],
+		"Story":[{"Button":"From Relief to Recovery in the Ayeyarwady Delta","Name":"mmr.html"}, {"Button":"Strengthening Disaster Management Systems in Burma","Name":"mmr2.html"}],
 		"Video":[],
 		"Infographic":[],
 		"type":"storm",
