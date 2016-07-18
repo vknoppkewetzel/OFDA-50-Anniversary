@@ -607,8 +607,8 @@ var featuredJSON = {
 	"NPL":{
 		"cat":"country",
 		"year":1900,
-		"options":["Video"],		
-		"Story":[],
+		"options":["Story", "Video"],		
+		"Story": [{ "Button": "Readying 'Go Bags'", "Name": "npl.html"}],
 		"Video":[{"Button":"Red Panda PSA on DRR in Nepal","URL":"www.youtube.com/embed/B_uSwAXkerA"}],
 		"Infographic":[],
 		"type":"DRR",
