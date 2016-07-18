@@ -1646,7 +1646,8 @@ function getHTTP(Media, Country, Name) {
 			.style("opacity", 0)
 
 			.html(function () {
-				var text;
+			    var text;
+			    
 				if (Media ===  "Video") {
 					text =  "<iframe width=\"" + width + "\" height=\"" + height + "\" src=\"//" + ThingByName[Name].URL + "\" frameborder=\"0\" allowfullscreen></iframe>";
 				console.log(ThingByName);
