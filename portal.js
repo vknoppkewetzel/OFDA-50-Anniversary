@@ -179,7 +179,7 @@ var featuredJSON = {
 		"cat":"country",
 		"year":2010,
 		"options":["Story"],
-		"Story":[{"Button":"By Preparing for Disaster, Chile Remains Resilient","Name":"chl.html"}],
+		"Story": [{ "Button": "By Preparing for Disaster, Chile Remains Resilient", "Name": "chl.html" }, { "Button": "Strengthening Response Readiness", "Name": "chl2.html" }],
 		"Video":[],
 		"disasterarray":{
 			"magnitude":8.8,
