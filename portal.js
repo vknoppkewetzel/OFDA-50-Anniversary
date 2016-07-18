@@ -609,7 +609,7 @@ var featuredJSON = {
 		"year":1900,
 		"options":["Story", "Video"],		
 		"Story": [{ "Button": "Readying 'Go Bags'", "Name": "npl.html" }, { "Button": "Critical Damage Assessments", "Name": "npl2.html" },
-		{ "Button": "Non-Structural Mitigation Helps", "Name": "npl3.html" }],
+		{ "Button": "Non-Structural Mitigation Helps", "Name": "npl3.html" }, { "Button": "Strengthening Disaster Response", "Name": "npl.html" }],
 		"Video":[{"Button":"Red Panda PSA on DRR in Nepal","URL":"www.youtube.com/embed/B_uSwAXkerA"}],
 		"Infographic":[],
 		"type":"DRR",
