@@ -110,7 +110,7 @@ var featuredJSON = {
 		"year":2011,
 		"options":["Story","Gallery","Video"],
 		"Story":[{"Button":"No Name","Name":"EthiopiaStory1.html"}],
-		"Video":[{"Button":"No Name","URL":"www.youtube.com/embed/jimweuZ_YnI"}],
+		"Video": [{ "Button": "Water Is Life", "URL": "www.youtube.com/embed/jimweuZ_YnI" }, { "Button": "Sweet Potato", "URL": "www.youtube.com/watch?v=Ef7T6YPTIIw" }],
 		"Infographic":[],
 		"Gallery":[{"Button":"Ethiopia Cooking School","Folder":"SweetPotato"},{"Button":"Water is Life","Folder":"Water"},{"Button":"Food for Life","Folder":"Food"}],
 		"type":"famine",
