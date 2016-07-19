@@ -733,7 +733,7 @@ var featuredJSON = {
 		"cat":"country",
 		"year":2013,
 		"options":["Gallery", "Story"],		
-		"Story":[{"Button":"Reuniting Families Separated During Conflict in South Sudan","Name":"sds.html"}],
+		"Story": [{ "Button": "Reuniting Families Separated During Conflict in South Sudan", "Name": "sds.html" }, { "Button": "Prudent Planning Matters", "Name": "sds2.html" }],
 		"Video":[],
 		"Infographic":[],
 		"Gallery":[{"Button":"Potatoes","Name":"sds_gallery.html"}],
