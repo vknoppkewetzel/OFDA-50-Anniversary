@@ -17,7 +17,7 @@ var featuredJSON = {
             { "Button": "Overcoming Delivery Challenges", "Name": "afg3.html" }],
 		"Video":[],
 		"Infographic": [],
-		"Fact Sheet": [{ "Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/afghanistan_ce_fs03_07-13-2016.pdf" }],
+		"Fact Sheet": [{ "Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/afghanistan_ce_fs03_07-13-2016.pdf"}],
 		"type":"complex",
 		"fullname":"Afghanistan",
 		"tagline":"Since 2002, ongoing conflict and recurring natural disasters have generated significant humanitarian needs in Afghanistan. Natural disasters affect approximately 250,000 Afghans each year; more than 672,000 people remain internally displaced as a result of conflict.",
