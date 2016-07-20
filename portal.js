@@ -32,7 +32,7 @@ var featuredJSON = {
 		"Story":[{"Button":"Training First Responders to Care for their own Communities in Angola","Name":"ago.html"}],
 		"Infographic":[],
 		"Video":[],
-        "Fact Sheet": [{ "Button": "No Name", "URL": "www.usaid.gov/crisis/angola"}],
+        "Fact Sheet": [{ "Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/southern_africa_dr_fs03_06-22-2016.pdf"}],
 		"fullname":"Angola",
 		"tagline":"After obtaining its independence from Portugal in November 1975, Angola plunged into 27 years of civil war that killed more than 500,000 people and displaced millions more.",
   		"ovTagline":"27 yrs of civil war beginning November 1975",
