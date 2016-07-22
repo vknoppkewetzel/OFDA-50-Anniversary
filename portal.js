@@ -1572,7 +1572,7 @@ setTimeout(function() {
     d3.selectAll(".island")
 		.append("circle")
 		.attr("r",4)					
-		.style("fill", "#002A6C")
+		.style("fill", "#FFCB36")
         .style("stroke", "#FFCB36")
 		.style("stroke-width","2px");
 	
