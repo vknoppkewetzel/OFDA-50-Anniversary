@@ -519,19 +519,25 @@ var featuredJSON = {
 		"ovElements":[["","",""],["","",""],["","",""]]
 
 		},
+
+
     "MHL":{
 		"cat":"country",
+		"tiny": "yes",
 		"year":1998,
 		"options":["Story"],
 		"Story":[{"Button":"Out from the Cold: Repairing Homes Destroyed During War","Name":"kos.html"}],
+		//this is testing
 		"Video":[],
 		"Infographic":[],
 		"type":"complex",
-		"fullname":"Kosovo",
+		"fullname":"Marshall Islands",
 		"tagline":"Conflict in Kosovo between February 1998 and June 1999 displaced hundreds of thousands of ethnic Albanians, resulting in the need for emergency assistance. The humanitarian crisis continued when people returned to their villages, only to find 1/3 of homes were damaged or destroyed.",
 		"ovTagline":"Conflict broke out in February 1998",
 		"ovElements":[["killed","10,000+",""],["displacedKosovo","500,000",""],["homes","365,000",""]]
 		},
+
+
 	"MRT":{
 		"cat":"regional",
 		"catName":"Sahel",
@@ -842,6 +848,12 @@ var featuredJSON = {
 		"ovTagline":"Flooding in 2011",
 		"ovElements":[["affected","13.6","MILLION"],["killed","823",""],["economicdamages","$46","BILLION"]]
 	   },
+
+
+
+
+
+
 	"ebola":{
 		"id":"ebola",
 		"xyz":[350,350,10],
@@ -1146,6 +1158,18 @@ function popup (centroid, selection, type) {
 		selectionName = selection.id;
 		headline = featuredJSON[selection.id].fullname;
 		tagline = featuredJSON[selection.id].tagline;
+
+		//testing marshall islands
+	} else if (type === "tiny" ) {
+		click = function(){country_clicked(selection);}; 
+		color = "#" + selection.id; 
+		style = "stroke-width","10px";
+		selectionName = selection.id;
+		headline = featuredJSON[selection.id].fullname;
+		tagline = featuredJSON[selection.id].tagline;
+
+
+
 	} else if (type === "florida") {
 		click = function(){		
 			var FLA = featuredJSON.FLA;
@@ -1519,6 +1543,23 @@ d3.json("countries_min.topo.json", function(error, us) {
 							c =	d3.selectAll(featuredJSON[featuredJSON[d.id].catID].countries)
 								.transition().duration(500).style("fill", "#E89624");
 						}
+
+
+
+						//testing marshall islands
+						if (featuredJSON[d.id].tiny === "yes" || featuredJSON[d.id].cat === "doubleRegional" || featuredJSON[d.id].cat === "both"){ 
+							console.log("marshall islands test 1");
+							c =	d3.select("#" + d.id).transition().duration(500).style("fill", "#E89624");
+						} else if (featuredJSON[d.id].tiny === "yes"){
+							console.log("marshall island test 2");
+							c =	d3.selectAll(featuredJSON[featuredJSON[d.id].catID].countries)
+								.transition().duration(500).style("fill", "#E89624");
+						}
+
+
+
+
+
 				//	d3.select("#" + d.id).transition().duration(500).style("fill", "#E89624");
 					var centroid = path.centroid(d);
 					var selection = d;
