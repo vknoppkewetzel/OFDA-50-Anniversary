@@ -923,7 +923,7 @@ var  points = [
 	["Dakar",[-17.44666,14.692778]],
 	["Nairobi",[36.81666,-1.28333]],
 	["Pretoria",[28.188056,-25.746111]],
-    ["MarshallIslands",[171.368295, 7.148687]],
+    // ["MarshallIslands",[171.368295, 7.148687]],
 	["Bangkok",[100.46666,13.75]]
 ];
 	
@@ -983,12 +983,12 @@ var points2 = {
 		"coord":[28.188056,-25.746111],
 		"tagline":"Pretoria, South Africa is the location of 1 of OFDA's 6 regional offices where staff oversee humanitarian programs in South Africa." 
 	},	
-    "MarshallIslands":{
-		"fullname":"Marshall Islands",
-		"type":"island",
-		"coord":[171.368295, 7.148687],
-		"tagline":"Bangkok, Thailand is the location of 1 of OFDA's 6 regional offices where staff oversee humanitarian programs in East Asia and the Pacific region, as well as South Asia." 
-	},
+    // "MarshallIslands":{
+	// 	"fullname":"Marshall Islands",
+	// 	"type":"island",
+	// 	"coord":[171.368295, 7.148687],
+	// 	"tagline":"Bangkok, Thailand is the location of 1 of OFDA's 6 regional offices where staff oversee humanitarian programs in East Asia and the Pacific region, as well as South Asia." 
+	// },
 	"Bangkok":{
 		"fullname":"Bangkok, Thailand",
 		"type":"office",
