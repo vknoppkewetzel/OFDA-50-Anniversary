@@ -935,7 +935,7 @@ var  points = [
 	["Dakar",[-17.44666,14.692778]],
 	["Nairobi",[36.81666,-1.28333]],
 	["Pretoria",[28.188056,-25.746111]],
-    // ["MarshallIslands",[171.368295, 7.148687]],
+     ["MarshallIslands",[171.368295, 7.148687]],
 	["Bangkok",[100.46666,13.75]]
 ];
 	
@@ -995,12 +995,12 @@ var points2 = {
 		"coord":[28.188056,-25.746111],
 		"tagline":"Pretoria, South Africa is the location of 1 of OFDA's 6 regional offices where staff oversee humanitarian programs in South Africa." 
 	},	
-    // "MarshallIslands":{
-	// 	"fullname":"Marshall Islands",
-	// 	"type":"island",
-	// 	"coord":[171.368295, 7.148687],
-	// 	"tagline":"Bangkok, Thailand is the location of 1 of OFDA's 6 regional offices where staff oversee humanitarian programs in East Asia and the Pacific region, as well as South Asia." 
-	// },
+     "MarshallIslands":{
+	 	"fullname":"Marshall Islands",
+	 	"type":"island",
+	 	"coord":[171.368295, 7.148687],
+	 	"tagline":"testing" 
+	 },
 	"Bangkok":{
 		"fullname":"Bangkok, Thailand",
 		"type":"office",
@@ -1159,14 +1159,14 @@ function popup (centroid, selection, type) {
 		headline = featuredJSON[selection.id].fullname;
 		tagline = featuredJSON[selection.id].tagline;
 
-		//testing marshall islands
-	} else if (type === "tiny" ) {
-		click = function(){country_clicked(selection);}; 
-		color = "#" + selection.id; 
-		style = "stroke-width","10px";
-		selectionName = selection.id;
-		headline = featuredJSON[selection.id].fullname;
-		tagline = featuredJSON[selection.id].tagline;
+	//	//testing marshall islands
+	//} else if (type === "tiny" ) {
+	//	click = function(){country_clicked(selection);}; 
+	//	color = "#" + selection.id; 
+	//	//style = "stroke-width","10px";
+	//	selectionName = selection.id;
+	//	headline = featuredJSON[selection.id].fullname;
+	//	tagline = featuredJSON[selection.id].tagline;
 
 
 
@@ -1191,9 +1191,9 @@ function popup (centroid, selection, type) {
 		headline = featuredJSON[featuredJSON[selection.id].catID].fullname;
 		tagline = featuredJSON[featuredJSON[selection.id].catID].tagline;	
 	} else if (type === "invisible" ) {
-//	} else if (type === "circle" ) {
-//		console.log(selection)	
-//	console.log(type)
+	//} else if (type === "circle" ) {
+	//	console.log(selection)	
+	console.log(type)
 		color = "#" + selection.id; 
 		click = function(){country_clicked(selection);}; 
 		selectionName = selection.id;
@@ -1452,6 +1452,8 @@ d3.json("countries_min.topo.json", function(error, us) {
 				return c;
 			});
 
+
+    //florida 
 	d3.json("data/json/FLA.json", function (error, fla) { 
 	g.append("g")
 		.selectAll("path")
@@ -1482,6 +1484,9 @@ d3.json("countries_min.topo.json", function(error, us) {
 			d3.select("#FLA").transition().duration(500).style("fill","#FFCB36");
 		});
 
+	});
+
+    // district of columbia
 	d3.json("data/json/DC.geojson", function (error, dc)  {
 	g.append("g")
 		.selectAll("path")
@@ -1492,9 +1497,45 @@ d3.json("countries_min.topo.json", function(error, us) {
 		.style("fill","#FFCB36")
 		.attr("id","DC_path");
 			
-		});
-	});			
+	});
+
+
+    //    //marshall islands testing 
+	//d3.json("data/json/states_mhl.json", function (error, mhl) { 
+	//    g.append("g")
+    //        .selectAll("path")
+    //        .data(mhl.features)
+    //        .enter()
+    //        .append("path")
+    //        .attr("d", path)
+    //        .style("stroke-width", 50)
+    //        .style("fill","#FFCB36")
+    //        .attr("id","MHL")
+    //        .on("mouseover", function(d) {
+    //            var centroid = path.centroid(d);
+    //            var selection = d;
+    //            var type = "tiny";
+    //            popup (centroid, selection, type);
+    //            d3.select("#MHL").transition().duration(500).style("fill","#E89624");
+    //        })
+    //        .on("click", function() {
+    //            var MHL = featuredJSON.MHL;
+    //            d3.selectAll(".popDetail, #tooltipImg, .popName, .another").remove();
+    //            tooltip.style("opacity",0).style("width","0px");	
+    //            zoom(MH.xyz);
+    //            contentDialog(MHL.id);
+    //            isGlobal(MHL.xyz, MHL.countries);
+    //            testDialog(dialogOptionBoolean,null);
+			
+    //        })
+    //        .on("mouseout", function() {
+    //            d3.select("#MHL").transition().duration(500).style("fill","#FFCB36");
+    //        });
+
+	//});			
 		
+
+
 	g.insert("g")
 	  	.datum(topojson.mesh(us, us.objects.countries_min, function (a, b)  {
 			return a !== b ; 
@@ -1543,20 +1584,6 @@ d3.json("countries_min.topo.json", function(error, us) {
 							c =	d3.selectAll(featuredJSON[featuredJSON[d.id].catID].countries)
 								.transition().duration(500).style("fill", "#E89624");
 						}
-
-
-
-						//testing marshall islands
-						if (featuredJSON[d.id].tiny === "yes" || featuredJSON[d.id].cat === "doubleRegional" || featuredJSON[d.id].cat === "both"){ 
-							console.log("marshall islands test 1");
-							c =	d3.select("#" + d.id).transition().duration(500).style("fill", "#E89624");
-						} else if (featuredJSON[d.id].tiny === "yes"){
-							console.log("marshall island test 2");
-							c =	d3.selectAll(featuredJSON[featuredJSON[d.id].catID].countries)
-								.transition().duration(500).style("fill", "#E89624");
-						}
-
-
 
 
 
@@ -1615,7 +1642,7 @@ setTimeout(function() {
 		.attr("r",4)					
 		.style("fill", "#FFCB36")
         .style("stroke", "#FFCB36")
-		.style("stroke-width","2px");
+		.style("stroke-width","5px");
 	
 	d3.selectAll(".office")
 		.append("path")
