@@ -17,7 +17,7 @@ var featuredJSON = {
             { "Button": "Overcoming Delivery Challenges", "Name": "afg3.html" }],
 		"Video":[],
 		"Infographic": [],
-		"Fact Sheet": [{ "Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/afghanistan_ce_fs03_07-13-2016.pdf"}],
+		"Fact Sheet": [{ "Button": "No Name", "URL": "https://www.usaid.gov/crisis/afghanistan"}],
 		"type":"complex",
 		"fullname":"Afghanistan",
 		"tagline":"Since 2002, ongoing conflict and recurring natural disasters have generated significant humanitarian needs in Afghanistan. Natural disasters affect approximately 250,000 Afghans each year; more than 672,000 people remain internally displaced as a result of conflict.",
@@ -32,7 +32,7 @@ var featuredJSON = {
 		"Story":[{"Button":"Training First Responders to Care for their own Communities in Angola","Name":"ago.html"}],
 		"Infographic":[],
 		"Video":[],
-        	"Fact Sheet": [{ "Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/southern_africa_dr_fs03_06-22-2016.pdf"}],
+        	"Fact Sheet": [{ "Button": "No Name", "URL": "https://www.usaid.gov/crisis/angola"}],
 		"fullname":"Angola",
 		"tagline":"After obtaining its independence from Portugal in November 1975, Angola plunged into 27 years of civil war that killed more than 500,000 people and displaced millions more.",
   		"ovTagline":"27 yrs of civil war beginning November 1975",
@@ -86,7 +86,7 @@ var featuredJSON = {
 		"Story":[{"Button":"From Relief to Recovery in the Ayeyarwady Delta","Name":"mmr.html"}, {"Button":"Strengthening Management Systems","Name":"mmr2.html"}],
 		"Video":[],
 		"Infographic":[],
-		"Fact Sheet": [{"Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/burma_ce_fs03_07-05-2016.pdf"}],
+		"Fact Sheet": [{"Button": "No Name", "URL": "https://www.usaid.gov/crisis/burma"}],
 		"type":"storm",
 		"fullname":"Burma",
 		"tagline":"On May 2, 2008, Cyclone Nargis made landfall in Burma, killing more than 138,000 people and affecting 2.4 million others. In June 2011, fighting erupted between the Government of Burma and the Kachin Independence Army, and ethnic and religious violence followed in June 2012, both causing hundreds of thousands to flee their homes.",
@@ -100,7 +100,7 @@ var featuredJSON = {
 		"Story":[{"Button":"Providing Emergency Shelter Repair in Bosnia","Name":"bih.html"}],
 		"Video":[],
 		"Infographic":[],
-        "Fact Sheet": [{ "Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/emca_drr_fs01_09-30-2013.pdf"}],
+        "Fact Sheet": [{ "Button": "No Name", "URL": "https://www.usaid.gov/crisis/bosnia-and-herzegovina"}],
 		"type":"complex",
 		"fullname":"Bosnia and Herzegovina",
 		"tagline":"Following the 1992 collapse of Yugoslavia, conflict between several ethnic groups erupted in newly formed Bosnia and Herzegovina. The war ended on November 21, 1995, leaving more than 97,000 people dead.",
@@ -116,7 +116,7 @@ var featuredJSON = {
 		"Story":[{"Button":"No Name","Name":"EthiopiaStory1.html"}],
 		"Video": [{ "Button": "Water Is Life", "URL": "www.youtube.com/embed/jimweuZ_YnI" }, { "Button": "Sweet Potato", "URL": "www.youtube.com/watch?v=Ef7T6YPTIIw" }],
 		"Infographic":[],
-		"Fact Sheet": [{"Button": "No Name", "URL":"www.usaid.gov/sites/default/files/documents/1866/ethiopia_ce_fs14_07-06-2016.pdf"}],
+		"Fact Sheet": [{"Button": "No Name", "URL":"https://www.usaid.gov/crisis/ethiopia"}],
 		"Gallery":[{"Button":"Ethiopia Cooking School","Folder":"SweetPotato"},{"Button":"Water is Life","Folder":"Water"},{"Button":"Food for Life","Folder":"Food"}],
 		"type":"famine",
 		"fullname":"Ethiopia",
@@ -159,7 +159,7 @@ var featuredJSON = {
 		"Story":[{"Button":"Central African Republic: Help and Hope after Upheaval","Name":"caf.html"},{"Button":"Honoring the Many Faces of Humanitarian Work","Name":"caf2.html"}],
 		"Video":[],
 		"Infographic":[],
-		"Fact Sheet": [{"Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/car_ce_fs04_06-06-2016.pdf"}],
+		"Fact Sheet": [{"Button": "No Name", "URL": "https://www.usaid.gov/crisis/central-african-republic"}],
 		"type":"complex",
 		"fullname":"Central African Republic",
 		"tagline":"In December 2012, Muslim Seleka fighters engaged in violent clashes with Christian anti-Balaka groups. Security conditions continue to deteriorate as conflict rages on, leaving half the country in need of humanitarian aid.",
@@ -219,7 +219,7 @@ var featuredJSON = {
 		"Story":[{"Button":"Re-establishing Primary Care in the DRC","Name":"cod.html"}],
 		"Video":[],
 		"Infographic":[],
-		"Fact Sheet": [{"Button": "No Name", "URL": "www.usaid.gov/sites/default/files/documents/1866/car_ce_fs04_06-06-2016.pdf"}],
+		"Fact Sheet": [{"Button": "No Name", "URL": "https://www.usaid.gov/crisis/democratic-republic-of-the-congo"}],
 		"type":"complex",
 		"fullname":"Democratic Republic of the Congo",
 		"tagline":"The conflict in the Democratic Republic of the Congo is one of the longest-running in Africa. Natural disasters, violence, forced recruitment into armed groups, and restricted humanitarian access have led to huge numbers of people being forced to flee their homes, often several times.",
@@ -1740,10 +1740,17 @@ function getHTTP(Media, Country, Name) {
 				console.log(ThingByName[Name]);
 				} else if (Media === "Story") {
 					text = "<iframe name='iframe1' id='iframe1' src=\"data/countries/" + Country.toLowerCase() + "/" + ThingByName[Name].Name + "\" seamless></iframe>";
-                } else if (Media === "Fact Sheet") {
-					text =  "<iframe width=\"" + width + "\" height=\"" + height + "\" src=\"//" + ThingByName[Name].URL + "\" frameborder=\"0\" allowfullscreen></iframe>";
-				console.log(ThingByName);
-				console.log(ThingByName[Name]);
+                } else if (Media === "Fact Sheet") { //trying to change fact sheet opening link
+
+					//removing grey box thing, related to iframe 
+				d3.select("#swipeBack").remove("div");
+
+				//text =  "<a href=\ \"" + ThingByName[Name].URL + "\"\ target=\"_blank\"> "; this iis previous, when had iframe
+				
+				text =  ThingByName[Name].URL;
+				//opens new window with site, make sure to keep http ref in orignal link
+				window.open(text);
+
 				} else if (Media === "Infographic") {
 					text = "<img width=\"" + width + "\" height=\"" + (height - 50) + "\"src=\"data/countries/" + Country.toLowerCase() + "/graphic.jpg\"><div style=\"width:100%;position:absolute;background-color:#2b2b2b;opacity:0.5;bottom:0px;\"><span class=\"font\" style=\"color:white;margin-left:5px;\" >PDF version<a style=\"color:#16B0C1;margin:5px;\" target=\"_blank\" href=" + featuredJSON[Country].Infographic[0].Hyperlink + ">here</a></span></div>";
 				} else if (Media === "Gallery") {
@@ -1759,7 +1766,9 @@ function getHTTP(Media, Country, Name) {
 		.style("top", function () {
 			if (Media ===  "Video") { return "35px"; } 
 			else if (Media === "Story") { return "35px"; }
-            else if (Media === "Fact Sheet") { return "35px"; }
+
+			//commenting out to remove the Media i-frame!!!
+            // else if (Media === "Fact Sheet") { return "35px"; }
 			else if (Media === "Infographic") { return "35px"; }
 			else if (Media === "Gallery") { return "0px"; }	 
 		});
@@ -1814,6 +1823,7 @@ function contentDialog(Country) {
 	})
 	.on("mouseover", function (){
 		dialogOptionBoolean = 1;
+		//mousever changing color t ogrey here 
 		d3.selectAll(".dialogBox").style("background-color","#16B0C1").style("color","white").on("mouseover.kill", function(){
 			d3.selectAll(".dialogBoxOption").remove();
 		});
