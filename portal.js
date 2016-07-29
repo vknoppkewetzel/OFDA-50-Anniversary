@@ -1000,7 +1000,7 @@ var points2 = {
 	 	"fullname":"Marshall Islands",
 	 	"type":"island",
 	 	"coord":[171.368295, 7.148687],
-	 	"tagline":"testing" 
+	 	"tagline":"testing: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum" 
 	 },
 	"Bangkok":{
 		"fullname":"Bangkok, Thailand",
