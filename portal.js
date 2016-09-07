@@ -624,7 +624,7 @@ var featuredJSON = {
 		"year":1900,
 		"options":["Story", "Video", "Fact Sheet"],		
 		"Story": [{ "Button": "Readying 'Go Bags'", "Name": "npl.html" }, { "Button": "Critical Damage Assessments", "Name": "npl2.html" },
-		{ "Button": "Non-Structural Mitigation Helps", "Name": "npl3.html" }, { "Button": "Strengthening Disaster Response", "Name": "np4.html" },
+		{ "Button": "Non-Structural Mitigation Helps", "Name": "npl3.html" }, { "Button": "Strengthening Disaster Response", "Name": "npl4.html" },
 		{ "Button": "School Earthquake Safety", "Name": "npl5.html" }, { "Button": "Real Response Heroes", "Name": "npl6.html" }],
 		"Video":[{"Button":"Red Panda PSA on DRR in Nepal","URL":"www.youtube.com/embed/B_uSwAXkerA"}],
 		"Infographic":[],
