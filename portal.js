@@ -1,5 +1,5 @@
 var width = 960,
-    height = 750,
+    height = 600,
     country,
     state;
 var topMargin = 0, 
@@ -1040,7 +1040,7 @@ var projection = d3.geo.cylindricalStereographic()
 	.rotate([-32,0])
 	.parallel(45)
     .scale(245)
-    .translate([(width)/2,( height)/ 2]);
+    .translate([(width)/2,( height)/ 1.6]);
 
 var trackWidth = 0.5;
 
@@ -1160,15 +1160,6 @@ function popup (centroid, selection, type) {
 		headline = featuredJSON[selection.id].fullname;
 		tagline = featuredJSON[selection.id].tagline;
 
-	//	//testing marshall islands
-	//} else if (type === "tiny" ) {
-	//	click = function(){country_clicked(selection);}; 
-	//	color = "#" + selection.id; 
-	//	//style = "stroke-width","10px";
-	//	selectionName = selection.id;
-	//	headline = featuredJSON[selection.id].fullname;
-	//	tagline = featuredJSON[selection.id].tagline;
-
 
 
 	} else if (type === "florida") {
@@ -1226,17 +1217,30 @@ function popup (centroid, selection, type) {
 	
 	var arrow = {};
 	var offsets = [];
-if (centroid[0] >= 0.8 * width || selection.id === "IDN"|| selection.id === "SOM" ) {
+if (centroid[0] >= 0.8 * width || selection.id === "SOM" || selection.id ==="MHL" || selection.id ==="THA" || selection.id ==="AFG") {
 		arrow = {"height":0,"width":0,"border":"20px solid hsla(0,0%,0%,0)","border-left":"20px solid #16B0C1","top":"75px","left":"100%","border-right":"0px solid hsla(0,0%,0%,0)","pointer-events":"none"};
-		offsets = [230,-100];
+		offsets = [227,-86];
 							
-	} else if (centroid[1] >= 0.8 * height) {
+	}
+
+	else if (selection.id ==="CHL" ) {
+		arrow = {"height":0,"width":0,"border":"20px solid hsla(0,0%,0%,0)","border-right":"20px solid #16B0C1","left":"-20px","top":"75px","border-left":"0px solid hsla(0,0%,0%,0)","pointer-events":"none"};
+		offsets = [-33,-165];
+	} 
+	else if (selection.id ==="IND" || selection.id ==="COL" || selection.id ==="KHM" || selection.id ==="PAK") {
+		arrow = {"height":0,"width":0,"border":"20px solid hsla(0,0%,0%,0)","border-right":"20px solid #16B0C1","left":"-20px","top":"75px","border-left":"0px solid hsla(0,0%,0%,0)","pointer-events":"none"};
+		offsets = [-30,-90];
+	} 
+	
+	else if (centroid[1] >= 0.8 * height) {
 		arrow = {"height":0,"width":0,"border":"20px solid hsla(0,0%,0%,0)","border-top":"20px solid #16B0C1","bottom":"-20px","border-bottom":"0px solid hsla(0,0%,0%,0)","pointer-events":"none"};
 		offsets = [95,29];
-	} else if (centroid[0] <= 0.2 * height || selection.id === "CHL" || selection.id === "SDS") {
+	} else if (centroid[0] <= 0.2 * height || selection.id === "BRA" || selection.id === "SDS") {
 		arrow = {"height":0,"width":0,"border":"20px solid hsla(0,0%,0%,0)","border-right":"20px solid #16B0C1","left":"-20px","top":"75px","border-left":"0px solid hsla(0,0%,0%,0)","pointer-events":"none"};
 		offsets = [-33,-86];
-	} else {
+	}
+ 
+	else {
 		arrow = {"height":0,"width":0,"border":"20px solid hsla(0,0%,0%,0)","border-bottom":"20px solid #16B0C1","top":"-20px","left":"40%","border-top":"0px solid hsla(0,0%,0%,0)","pointer-events":"none"};
 		offsets = [97,33];
 	}
@@ -1500,41 +1504,6 @@ d3.json("countries_min.topo.json", function(error, us) {
 			
 	});
 
-
-    //    //marshall islands testing 
-	//d3.json("data/json/states_mhl.json", function (error, mhl) { 
-	//    g.append("g")
-    //        .selectAll("path")
-    //        .data(mhl.features)
-    //        .enter()
-    //        .append("path")
-    //        .attr("d", path)
-    //        .style("stroke-width", 50)
-    //        .style("fill","#FFCB36")
-    //        .attr("id","MHL")
-    //        .on("mouseover", function(d) {
-    //            var centroid = path.centroid(d);
-    //            var selection = d;
-    //            var type = "tiny";
-    //            popup (centroid, selection, type);
-    //            d3.select("#MHL").transition().duration(500).style("fill","#E89624");
-    //        })
-    //        .on("click", function() {
-    //            var MHL = featuredJSON.MHL;
-    //            d3.selectAll(".popDetail, #tooltipImg, .popName, .another").remove();
-    //            tooltip.style("opacity",0).style("width","0px");	
-    //            zoom(MH.xyz);
-    //            contentDialog(MHL.id);
-    //            isGlobal(MHL.xyz, MHL.countries);
-    //            testDialog(dialogOptionBoolean,null);
-			
-    //        })
-    //        .on("mouseout", function() {
-    //            d3.select("#MHL").transition().duration(500).style("fill","#FFCB36");
-    //        });
-
-	//});			
-		
 
 
 	g.insert("g")
