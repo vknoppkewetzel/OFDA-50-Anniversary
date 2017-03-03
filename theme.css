@@ -22,6 +22,7 @@ src: format('opentype');
 	font-size: 15px;
 }
 
+
 #dataTitle {
 
 	width: 120px;
@@ -273,7 +274,7 @@ left:5px;
 
 #ovContainer {
 	position:absolute;
-	height:110px;
+	height:60px;
 	bottom:10px;
 	left:10px;
 	background-color:whitesmoke;
@@ -284,7 +285,7 @@ left:5px;
 #ovHead {
 	color:#002A6C;
 	position:relative;
-	bottom:105px;
+	bottom:45px;
 	margin-left:9px;
 	font-family: 'ssp_bold', sans-serif;
 	font-weight:bold;

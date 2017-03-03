@@ -370,7 +370,8 @@ var featuredJSON = {
 		"fullname":"Honduras",
 		"tagline":"Hurricane Mitch was the most powerful and destructive hurricane of the 1998 Atlantic Hurricane Season, killing nearly 10,000 people and destroying nearly 100,000 homes.",
 		"ovTagline":"Hurricane Mitch struck October to November 1998",
-		"ovElements":[["affected","3.6", "MILLION"],["killed","10,000",""],["housedestroy","100,000", ""]]
+		 "ovElements":
+        [["affected","3.6", "MILLION"],["killed","10,000",""],["housedestroy","100,000", ""]]
 	   },
 	"IDN":{
 		"cat":"both",
@@ -852,9 +853,6 @@ var featuredJSON = {
 
 
 
-
-
-
 	"ebola":{
 		"id":"ebola",
 		"xyz":[350,350,10],
@@ -1036,6 +1034,7 @@ d3.select("body").append("div")
 
 //timer id to clear setTimout later
 var timerID;
+
 var projection = d3.geo.cylindricalStereographic()
 	.rotate([-32,0])
 	.parallel(45)
@@ -1555,8 +1554,6 @@ d3.json("countries_min.topo.json", function(error, us) {
 								.transition().duration(500).style("fill", "#E89624");
 						}
 
-
-
 				//	d3.select("#" + d.id).transition().duration(500).style("fill", "#E89624");
 					var centroid = path.centroid(d);
 					var selection = d;
@@ -1574,67 +1571,67 @@ d3.json("countries_min.topo.json", function(error, us) {
 					return c;		
 				});
 
-setTimeout(function() {
+	setTimeout(function() {
 
-	g.append("g").selectAll(".points")
-		.data(points)
-		.enter()
-		.append("g")
-    			.attr("transform", function(d) {
-					return "translate(" + projection(d[1]) + ")";
-				})
-				.attr("id", function (d) {return d[0];})
-				
-					.on("mouseover", function(d) {	
-						var centroid = projection(d[1]);
-						var selection = d[0];
-						
-						var type = "";
-						if (this.id === "DC") {
-							type = "DC";
-						} else {
-							type = "points";
-						}
-						popup(centroid, selection, type); 
+		g.append("g").selectAll(".points")
+			.data(points)
+			.enter()
+			.append("g")
+					.attr("transform", function(d) {
+						return "translate(" + projection(d[1]) + ")";
 					})
-					.attr("class",function(d) {
-						return points2[d[0]].type;
-					});
+					.attr("id", function (d) {return d[0];})
+					
+						.on("mouseover", function(d) {	
+							var centroid = projection(d[1]);
+							var selection = d[0];
+							
+							var type = "";
+							if (this.id === "DC") {
+								type = "DC";
+							} else {
+								type = "points";
+							}
+							popup(centroid, selection, type); 
+						})
+						.attr("class",function(d) {
+							return points2[d[0]].type;
+						});
 
-	d3.selectAll(".warehouse")
-		.append("circle")
-		.attr("r",4)					
-		.style("fill","#002A6C")
-		.style("stroke-width","2px");
-    
-    d3.selectAll(".island")
-		.append("circle")
-		.attr("r",4)					
-		.style("fill", "#FFCB36")
-        .style("stroke", "#FFCB36")
-		.style("stroke-width","5px");
-	
-	d3.selectAll(".office")
-		.append("path")
-		.attr("d","m 11.111678,0.93801117 c 0.438436,0 2.912939,7.87941143 3.26764,8.13711713 0.354702,0.2577057 8.613131,0.1762266 8.748615,0.5932032 0.135484,0.4169765 -6.593618,5.2052405 -6.729102,5.6222175 -0.135484,0.416977 2.494002,8.246031 2.139301,8.503737 -0.354702,0.257706 -6.988019,-4.662396 -7.426454,-4.662396 -0.438435,0 -7.0717525,4.920101 -7.4264539,4.662396 C 3.3305226,23.53658 5.9600094,15.707526 5.8245255,15.290549 5.6890416,14.873572 -1.0400603,10.085307 -0.90457641,9.6683309 -0.76909251,9.2513543 7.4893366,9.332834 7.8440381,9.0751283 8.1987395,8.8174226 10.673243,0.93801117 11.111678,0.93801117 z")
-		.style("fill", "#002A6C")
-     
-		.style("stroke-width","2px")
-		.attr("transform", "translate(-5,-7) scale(.5)");
-	
-	d3.selectAll(".headquarters")
-		.append("circle")
-		.attr("r",7)					
-		.style("fill","#002A6C")
-		.style("stroke-width","2px");
+		d3.selectAll(".warehouse")
+			.append("circle")
+			.attr("r",4)					
+			.style("fill","#002A6C")
+			.style("stroke-width","2px");
+		
+		d3.selectAll(".island")
+			.append("circle")
+			.attr("r",4)					
+			.style("fill", "#FFCB36")
+			.style("stroke", "#FFCB36")
+			.style("stroke-width","5px");
+		
+		d3.selectAll(".office")
+			.append("path")
+			.attr("d","m 11.111678,0.93801117 c 0.438436,0 2.912939,7.87941143 3.26764,8.13711713 0.354702,0.2577057 8.613131,0.1762266 8.748615,0.5932032 0.135484,0.4169765 -6.593618,5.2052405 -6.729102,5.6222175 -0.135484,0.416977 2.494002,8.246031 2.139301,8.503737 -0.354702,0.257706 -6.988019,-4.662396 -7.426454,-4.662396 -0.438435,0 -7.0717525,4.920101 -7.4264539,4.662396 C 3.3305226,23.53658 5.9600094,15.707526 5.8245255,15.290549 5.6890416,14.873572 -1.0400603,10.085307 -0.90457641,9.6683309 -0.76909251,9.2513543 7.4893366,9.332834 7.8440381,9.0751283 8.1987395,8.8174226 10.673243,0.93801117 11.111678,0.93801117 z")
+			.style("fill", "#002A6C")
+		
+			.style("stroke-width","2px")
+			.attr("transform", "translate(-5,-7) scale(.5)");
+		
+		d3.selectAll(".headquarters")
+			.append("circle")
+			.attr("r",7)					
+			.style("fill","#002A6C")
+			.style("stroke-width","2px");
 
-	d3.selectAll(".headquarters")
-		.append("path")
-		.attr("d","m 11.111678,0.93801117 c 0.438436,0 2.912939,7.87941143 3.26764,8.13711713 0.354702,0.2577057 8.613131,0.1762266 8.748615,0.5932032 0.135484,0.4169765 -6.593618,5.2052405 -6.729102,5.6222175 -0.135484,0.416977 2.494002,8.246031 2.139301,8.503737 -0.354702,0.257706 -6.988019,-4.662396 -7.426454,-4.662396 -0.438435,0 -7.0717525,4.920101 -7.4264539,4.662396 C 3.3305226,23.53658 5.9600094,15.707526 5.8245255,15.290549 5.6890416,14.873572 -1.0400603,10.085307 -0.90457641,9.6683309 -0.76909251,9.2513543 7.4893366,9.332834 7.8440381,9.0751283 8.1987395,8.8174226 10.673243,0.93801117 11.111678,0.93801117 z")
-		.style("fill","white")
-		.attr("id","test")
-		.attr("transform", "translate(-5.5,-6.5) scale(.5)");
-},75);
+		d3.selectAll(".headquarters")
+			.append("path")
+			.attr("d","m 11.111678,0.93801117 c 0.438436,0 2.912939,7.87941143 3.26764,8.13711713 0.354702,0.2577057 8.613131,0.1762266 8.748615,0.5932032 0.135484,0.4169765 -6.593618,5.2052405 -6.729102,5.6222175 -0.135484,0.416977 2.494002,8.246031 2.139301,8.503737 -0.354702,0.257706 -6.988019,-4.662396 -7.426454,-4.662396 -0.438435,0 -7.0717525,4.920101 -7.4264539,4.662396 C 3.3305226,23.53658 5.9600094,15.707526 5.8245255,15.290549 5.6890416,14.873572 -1.0400603,10.085307 -0.90457641,9.6683309 -0.76909251,9.2513543 7.4893366,9.332834 7.8440381,9.0751283 8.1987395,8.8174226 10.673243,0.93801117 11.111678,0.93801117 z")
+			.style("fill","white")
+			.attr("id","test")
+			.attr("transform", "translate(-5.5,-6.5) scale(.5)");
+	},75);
 
 });
 
@@ -1879,20 +1876,20 @@ function ov(feature) {
 					.text(function () {  return featuredJSON[feature].ovTagline; } ); 
 				
 			d3.select("#map").select("#ovContainer")
-					.selectAll(".ovElement")
-					.data(function () { return featuredJSON[feature].ovElements; })
-					.enter()				
-					.append("div")
-						.attr("class","ovElement")
-						.style("border-left", function (i) { 
-							var border;
-							if (i === 0) {
-								border = "0px solid hsla(0,0%,0%,0)";
-							} else {
-								border = "1px solid #CFCDC9";
-							}
-								return border;
-						})
+					// .selectAll(".ovElement")
+					// .data(function () { return featuredJSON[feature].ovElements; })
+					// .enter()				
+					// .append("div")
+					// 	.attr("class","ovElement")
+					// 	.style("border-left", function (i) { 
+					// 		var border;
+					// 		if (i === 0) {
+					// 			border = "0px solid hsla(0,0%,0%,0)";
+					// 		} else {
+					// 			border = "1px solid #CFCDC9";
+					// 		}
+					// 			return border;
+					// 	})
 				     .html(function (d) {	
 								var text;
 								if (d[0] === "displaced") {
@@ -2033,266 +2030,12 @@ function country_clicked(d) {
 			d3.select("#dataTitle").append("div")
 				.attr("id","dataTitleHTML")
 
-		/* var hurrAnimation = function(track_location) {
-		d3.json("data/countries/" + d.id.toLowerCase() + "/" + track_location, function(error, track) {
-
-		//	var color_scale = d3.scale.quantile().domain([1,5]).range(colorbrewer.YlGnBu[5]);
-			var color_scale = d3.scale.quantile().domain([0,1,5]).range(["white","#f48b8e","#a21015"]);
-			var year = featuredJSON[d.id].year;
-
-        		d3.select("#dataTitleHTML").html("<p><span id=\"popYear\">" + track[0].month + " " + track[0].day + ", " + year  + "</span><br>Category: <span style=\"color:" + color_scale(track[0].class) + "\">" + track[0].class + "</span></p>");
-			var dateTextChange = map.select('#dataTitleHTML');
-						
-			//var cat = dateTextChange.select('#category');	
-
-			var line = d3.svg.line()
-				.interpolate("cardinal")
-				.x(function(d) {return projection([d.lon, d.lat])[0]; })
-				.y(function(d) {return projection([d.lon, d.lat])[1]; });
-
-			var baseHurrPath = svg.append("path")
-				.attr("d",line(track))
-				.attr("fill","none")
-				.attr("stroke","none")
-				.attr("stroke-width",0);
-
-					var hurrPathEl = baseHurrPath.node();
-					var hurrPathElLen = hurrPathEl.getTotalLength();
-
-					var pt = hurrPathEl.getPointAtLength(0);
-					
-					var path_g = g.append("g")
-									.attr("id","hurr");
-
-                    var icon_g = g.append("g")
-                    	.attr("transform", "translate(" + pt.x + "," + pt.y + "), scale("+(0.05*track[0].class)+")")
-						.attr("id","icon");
-					
-					var icon_bg = icon_g.append("circle")
-    					.attr("r",20)
-    					.attr("fill", "#ffffff")
-    					.attr("class","icon");
-
-  					var icon = icon_g.append("path")
-    					.attr("d","m 20,-42 c -21.61358,0.19629 -34.308391,10.76213 -41.46346,18.0657 -7.155097,7.3036 -11.451337,17.59059 -11.599112,26.13277 0,14.45439 9.037059,26.79801 21.767213,31.69368 -14.965519,10.64929 -25.578236,6.78076 -37.671451,7.85549 C -4.429787,54.20699 14.03,37.263 23.12144,28.41572 32.2133,19.56854 34.6802,10.79063 34.82941,2.19847 c 0,-14.45219 -9.03405,-26.79679 -21.76113,-31.69364 14.90401,-10.54656 25.48889,-6.69889 37.55061,-7.77104 C 38.78869,-40.57565 29.11666,-41.95733 21.03853,-42 20.68954,-42.0105 20.34303,-42.0105 20,-42 z M 0.82306,-7.46851 c 4.72694,0 8.56186,4.27392 8.56186,9.54602 0,5.2725 -3.83492,9.54651 -8.56186,9.54651 -4.726719,0 -8.555958,-4.27401 -8.555958,-9.54651 0,-5.2721 3.829239,-9.54602 8.555958,-9.54602 z")
-    
-    					.attr("fill", color_scale(track[0].class))
-    					.attr("class","icon");
-
-  					var i = 0;
-  
-  					var animation = setInterval(function(){
-      					pt = hurrPathEl.getPointAtLength(hurrPathElLen*i/track.length);
-      					icon_g
-        					.transition()
-        					.ease("linear")
-        					.duration(150) //changed from 1000
-        					.attr("transform", "translate(" + pt.x + "," + pt.y + "), scale("+(0.05*track[i].class)+"), rotate("+(i*15)+")");
-      					icon
-        					.transition()
-        					.ease("linear")
-        					.duration(150) //changed from 1000
-
-        					.attr("fill", color_scale(track[i].class));
-						
-      					dateTextChange
-        					.html("<p><b>" + track[i].month +" " + track[i].day +", " + year + "<br>Category: <span id=\"category\" style=\"color:" + color_scale(track[i].class) + "\">" + track[i].class + "</span></p>");
-								
-                        //cat.text(track[i].class).style("color", color_scale(track[i].class));
-							
-      					//Draw the path, only when i > 0 in otder to have two points
-      					if (i>0){
-        					var color0 = color_scale(track[i-1].class);
-        					var color1 = color_scale(track[i].class);
-
-        					var activatedTrack = [];
-        
-        					activatedTrack.push(track[i-1]);
-        					activatedTrack.push(track[i]);
-
-        					var color = d3.interpolateLab(color0, color1);
-        					path_g.selectAll("path"+i)
-        					.data(quad(sample(line(activatedTrack), 1)))
-        					.enter().append("path")
-          						.style("fill", function(d) { return color(d.t);})
-          						.style("stroke", function(d) { return color(d.t); })
-          						.attr("d", function(d) { return lineJoin(d[0], d[1], d[2], d[3], trackWidth); });
-      					}
-					      	i = i + 1;
-          					if (i==track.length)
-            					clearInterval(animation);
-  					},150);
-			//	var path_xyz = get_xyz(path_g);
-
-				});
-			
-			
-				// Sample the SVG path string "d" uniformly with the specified precision.
-				var sample = function (d, precision) {
-  					var path = document.createElementNS(d3.ns.prefix.svg, "path");
-  					path.setAttribute("d", d);
-
-  					var n = path.getTotalLength(), t = [0], i = 0, dt = precision;
-  					while ((i += dt) < n) t.push(i);
-  					t.push(n);
-
-  					return t.map(function(t) {
-    					var p = path.getPointAtLength(t), a = [p.x, p.y];
-    					a.t = t / n;
-    					return a;
-  					});
-				};
-
-				// Compute quads of adjacent points [p0, p1, p2, p3].
-				var quad = function(points) {
-  					return d3.range(points.length - 1).map(function(i) {
-    					var a = [points[i - 1], points[i], points[i + 1], points[i + 2]];
-    					a.t = (points[i].t + points[i + 1].t) / 2;
-    					return a;
- 				 	});
-				};
-
-				// Compute stroke outline for segment p12.
-				var lineJoin = function(p0, p1, p2, p3, width) {
-  					var u12 = perp(p1, p2),
-      					r = width / 2,
-      					a = [p1[0] + u12[0] * r, p1[1] + u12[1] * r],
-      					b = [p2[0] + u12[0] * r, p2[1] + u12[1] * r],
-      					c = [p2[0] - u12[0] * r, p2[1] - u12[1] * r],
-      					d = [p1[0] - u12[0] * r, p1[1] - u12[1] * r];
-
-  					if (p0) { // clip ad and dc using average of u01 and u12
-    					var u01 = perp(p0, p1), e = [p1[0] + u01[0] + u12[0], p1[1] + u01[1] + u12[1]];
-    					a = lineIntersect(p1, e, a, b);
-    					d = lineIntersect(p1, e, d, c);
-  					}
-
-					if (p3) { // clip ab and dc using average of u12 and u23
-    					var u23 = perp(p2, p3), e = [p2[0] + u23[0] + u12[0], p2[1] + u23[1] + u12[1]];
-    						b = lineIntersect(p2, e, a, b);
-    						c = lineIntersect(p2, e, d, c);
-  					}
-
-  					return "M" + a + "L" + b + " " + c + " " + d + "Z";
-					};
-
-				// Compute intersection of two infinite lines ab and cd.
-				var lineIntersect = function(a, b, c, d) {
-  					var x1 = c[0], x3 = a[0], x21 = d[0] - x1, x43 = b[0] - x3,
-      					y1 = c[1], y3 = a[1], y21 = d[1] - y1, y43 = b[1] - y3,
-      					ua = (x43 * (y1 - y3) - y43 * (x1 - x3)) / (y43 * x21 - x43 * y21);
-  					return [x1 + ua * x21, y1 + ua * y21];
-				};
-
-				// Compute unit vector perpendicular to p01.
-				var perp = function(p0, p1) {
-  					var u01x = p0[1] - p1[1], u01y = p1[0] - p0[0],
-      					u01d = Math.sqrt(u01x * u01x + u01y * u01y);
-  					return [u01x / u01d, u01y / u01d];
-				};
-			}//end of the hurrAnimation */
-			
-		if (d.id === "IND") {
-			hurrAnimation("track.json");
-			timerID = setTimeout(function(){ hurrAnimation("track2.json"); },2000);
-	
-		} else {
-			hurrAnimation("track.json");
-		}
-   		}
-
-		else if ( featuredJSON[d.id].type == 'quake') {		
-		var zoomFactor = [1,1,0.5];
-		for(var i=0; i < zoomFactor.length; i++) {
-				xyz[i] = zoomFactor[i] * xyz[i];
-		}	
-
-
 
 			contentDialog(d.id);			
 			zoom2ADM(d,xyz); 			
 			ov(d.id);
 
-		/* setTimeout(function() {			
-			g.append("circle")
-    			.attr("class", "dot")
-				.style("opacity",0)
-				.transition().delay(700)
-    	//		.attr("transform", "translate(" + projection(featuredJSON[d.id].disasterarray.epicenter) + ")")
-				.attr("cx", projection(featuredJSON[d.id].disasterarray.epicenter)[0])
-				.attr("cy",projection(featuredJSON[d.id].disasterarray.epicenter)[1])
-				.style("fill","#c7141a")
-    			.attr("r", 6 / xyz[2])
-				.style("opacity",1);			
-			animation = setInterval(function() {
-  				g.append("circle")
-      				.attr("class", "ring")
-      				.attr("transform", "translate(" + projection(featuredJSON[d.id].disasterarray.epicenter) + ")")
-      			//	.attr("r", 0)
-					.attr("r", featuredJSON[d.id].disasterarray.magnitude * 18 / xyz[2])
-					.attr("r", 4 / xyz[2] )
-      				.style("stroke-width", 3 / xyz[2])
-      				.style("stroke", "red")
-    			.transition()
-      				.ease("linear")
-      				.duration(6000)
-      				.style("stroke-opacity", 1e-6)
-      				.style("stroke-width", 1 / xyz[2]) 
-      				.style("stroke", "brown")
-      			//	.attr("r", 160 / xyz[2] )
-					.attr("r", featuredJSON[d.id].disasterarray.magnitude * 18 / xyz[2])
-      				.remove();
-			}, 800);
-			d3.selectAll(".background, #globeContainer, .notFeatured")
-				.on("click.stop", function() {
-					clearInterval(animation);		
-					clearInterval(animation2);		
-					svg.selectAll(".dot").remove();
-					svg.selectAll(".ring").remove();
-					d3.selectAll(".background, #globeContainer, .notFeatured")
-						.on("click.stop", null);
-					
-				});
-
-			},200); */
-	
 		
-
-	//if (d.id === "SLV") {
-	
-	//	setTimeout(function() { 
-	//	setTimeout(function() {			
-	//		g.append("circle")
-    //			.attr("class", "dot")
-	//			.style("opacity",0)
-	//			.transition().delay(700)
-    //	//		.attr("transform", "translate(" + projection(featuredJSON[d.id].disasterarray.epicenter) + ")")
-	//			.attr("cx", projection(featuredJSON[d.id].disasterarray2.epicenter)[0])
-	//			.attr("cy",projection(featuredJSON[d.id].disasterarray2.epicenter)[1])
-	//			.style("fill","#c7141a")
-    //			.attr("r", 6 / xyz[2])
-	//			.style("opacity",1);			
-	//		animation2 = setInterval(function() {
-  	//			g.append("circle")
-    //  				.attr("class", "ring")
-    //  				.attr("transform", "translate(" + projection(featuredJSON[d.id].disasterarray2.epicenter) + ")")
-    //  			//	.attr("r", 0)
-	//				.attr("r", 4 / xyz[2] )
-    //  				.style("stroke-width", 3 / xyz[2])
-    //  				.style("stroke", "red")
-    //			.transition()
-    //  				.ease("linear")
-    //  				.duration(6000)
-    //  				.style("stroke-opacity", 1e-6)
-    //  				.style("stroke-width", 1 / xyz[2]) 
-    //  				.style("stroke", "brown")
-    //  			//	.attr("r", 160 / xyz[2] )
-	//				.attr("r", featuredJSON[d.id].disasterarray2.magnitude * 18 / xyz[2])
-    //  				.remove();
-	//		}, 800);
-	//		},200);
-	//	 },700 );
-	//}
 		}
 
 		else if ( featuredJSON[d.id].type == "complex" || featuredJSON[d.id].type == "flood" || featuredJSON[d.id].type == "volcano" || featuredJSON[d.id].type == "famine" || featuredJSON[d.id].type == "DRR" ) {
@@ -2320,14 +2063,19 @@ function country_clicked(d) {
 	} else {
 		d3.select("#ovContainer").remove();
 		d3.select("#dataTitle").remove();
-		d3.select("#hurr").remove();
+		
 		d3.select("#icon").remove();
+
 		var xyz = [width / 2, height / 2, 1];
     	country = null;
 		d3.select("#dialogBoxContainer").remove();
+		
+		////////////////////////////i blocked this out, this also somehow relates to zooming ish//////////////////////////////////////////////////
     	zoom(xyz);
-		isGlobal(xyz, null); 
+		isGlobal(xyz, null); //this relates to zooming in and selecting in color, the country that is clicked on gets colored
+
 		d3.selectAll(".dialogBox").remove();
+	
   	}
 }
 
