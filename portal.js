@@ -1,5 +1,5 @@
-var width = 960,
-    height = 600,
+var width = 980,
+    height = 500, //changing height will change the size of svg....
     country,
     state;
 var topMargin = 0, 
@@ -1039,7 +1039,7 @@ var projection = d3.geo.cylindricalStereographic()
 	.rotate([-32,0])
 	.parallel(45)
     .scale(245)
-    .translate([(width)/2,( height)/ 1.6]);
+    .translate([(width)/2,( height)/ 2]); //changing what height is divided by changes the display
 
 var trackWidth = 0.5;
 
@@ -1216,6 +1216,7 @@ function popup (centroid, selection, type) {
 	
 	var arrow = {};
 	var offsets = [];
+	/// the following shows information for pop up tooltip boxes - if else relates to arrow pointing
 if (centroid[0] >= 0.8 * width || selection.id === "SOM" || selection.id ==="MHL" || selection.id ==="THA" || selection.id ==="AFG") {
 		arrow = {"height":0,"width":0,"border":"20px solid hsla(0,0%,0%,0)","border-left":"20px solid #16B0C1","top":"75px","left":"100%","border-right":"0px solid hsla(0,0%,0%,0)","pointer-events":"none"};
 		offsets = [227,-86];
